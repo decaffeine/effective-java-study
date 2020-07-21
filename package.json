@@ -1,0 +1,31 @@
+{
+    "name": "effective-java-study",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "directories": {
+        "doc": "docs"
+    },
+    "scripts": {
+        "doc": "vuepress dev docs",
+        "build": "vuepress build docs",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/decaffeine/effective-java-study.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/decaffeine/effective-java-study/issues"
+    },
+    "homepage": "https://github.com/decaffeine/effective-java-study#readme",
+    "devDependencies": {
+        "vuepress": "^1.5.2"
+    },
+    "dependencies": {
+        "yarn": "^1.22.4"
+    }
+}
