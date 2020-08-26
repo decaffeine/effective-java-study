@@ -6,7 +6,7 @@ module.exports = {
     themeConfig: {
         // VuePress 기본 테마에 필요한 설정을을 추가합니다.
         //logo: '/vue.png', // title옆에 나타날 로고 이미지
-        sidebar: ['/', '/chapter02/', '/chapter03/','/chapter04/','/chapter05/','/chapter06/','/chapter07/','/chapter08/','/chapter09/','/chapter10/','/chapter11/','/chapter12/'],
+        sidebar: ['/', '/chapter02/', '/chapter03/','/chapter04/','/chapter05/','/chapter06/'],
         nav: [
             { text: 'Home', link: '/' },
             { text: 'Sample', link: '/sample.html' },
