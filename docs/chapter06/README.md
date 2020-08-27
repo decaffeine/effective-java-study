@@ -37,7 +37,7 @@ public enum Operation {
 ```java
 Operation op1 = Operation.valueOf("PLUS") // 위의 PLUS가 반환됨
 Operation op2 = Operation.valueOf("MINUS") // 위의 MINUS가 반환*
-``
+```
 - Enum의 toString을 재정의하려면 toString이 반환하는 문자열을 해당 Enum으로 변환해주는 fromString 메서드도 함께 제공하는 것을 고려
 
 - 열거 타입을 언제 쓸까?  
@@ -201,4 +201,3 @@ public class Bigram {
   - 거대한 애너테이션 시스템의 지원을 받음  
 - 그래서 어떻게 써야하나요?  
   - 이 마킹이 된 객체를 매개변수로 받는 메서드를 작성할 일이 있다면 -> 마커 인터페이스를 써라  
-  
