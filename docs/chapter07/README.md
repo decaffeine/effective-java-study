@@ -22,7 +22,7 @@ Collections.sort(words, (s1, s2) -> Integer.compare(s1.length(), s2.length()));
 - 타입을 명시해야 코드가 더 명확할 때만 제외하고는, 람다의 모든 매개변수 타입은 생략  
   - 컴파일러가 "타입을 알 수 없다" 오류를 반환할 때만 해당 타입을 명시하면 된다  
 - 컴파일러가 타입 추론에 필요한 정보 대부분은 제네릭에서 얻으므로 제네릭을 제대로 쓴다  
-  - List words가 아니라, List<String> words  
+  - ```List words```가 아니라, ```List<String> words ```
 
 - 그렇다고 람다가 만병통치약은 아니다  
   - 이름이 없고, 문서화도 못 함
@@ -63,6 +63,7 @@ map.merge(key, 1, Integer::sum);
 ### 44. 표준 함수형 인터페이스를 사용하라  
 - java.util.function 패키지에 다양한 용도의 표준 함수형 인터페이스가 담겨 있다.  
   - 필요한 용도에 맞는 것이 있다면, 직접 구현하지 말고 표준 함수형 인터페이스를 활용
+```
   |      인터페이스       |        함수 시그니처    |          예           |
   |--------------------|----------------------|----------------------|
   | UnaryOperator<T>   | T apply(T t)         | String::toLowerCase  |
@@ -71,10 +72,11 @@ map.merge(key, 1, Integer::sum);
   | Function<T,R>      | R apply(T t)         | Arrays::asList       |
   | Supplier<T>        | T get()              | Instant::now         |
   | Consumer<T>        | void accept(T t)     | System.out::println  |
+```
 
 - UnaryOperator, BinaryOperator : 반환값과 인수의 타입이 같은 함수
 - Predicate : 인수 하나를 받아 boolean 반환
-- FUnction : 인수와 반환 타입이 다름
+- Function : 인수와 반환 타입이 다름
 - Supplier : 인수를 받지 않고 값을 반환(제공)
 - Consumer : 인수를 하나 받고 반환값은 없음(인수를 소비)
 
@@ -107,7 +109,7 @@ map.merge(key, 1, Integer::sum);
 - 각 변환 단계는 가능한 한 이전 단계의 결과를 받아 처리하는, 오직 입력만이 결과에 영향을 주는 순수 함수여야 함
   - side-effect가 없어야 한다. 즉 다른 가변 상태를 참조하거나 함수 스스로 다른 상태를 변경하면 안 된다.
 
-- forEach 연산은 스트림 계싼 결과를 보고할 때만 사용하고, 계산할 때는 쓰지 말자 (헐)  
+- forEach 연산은 스트림 계산 결과를 보고할 때만 사용하고, 계산할 때는 쓰지 말자 (헐)  
 - Collector : 스트림을 사용하려면 꼭 배워야 하는 새로운 개념
   - java.util.stream.Collectors
     - API 문서 참조!
