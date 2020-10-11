@@ -15,6 +15,8 @@ module.exports = {
             '/chapter06/',
             '/chapter07/',
             '/chapter10/',
+            '/chapter11/',
+            '/chapter12/',
         ],
         nav: [
             { text: 'Home', link: '/' },
